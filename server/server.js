@@ -20,6 +20,7 @@ const create = config => {
   app.set('env', config.ENV);
 
   router.init(app);
+  return app;
 };
 
 const start = app => {
