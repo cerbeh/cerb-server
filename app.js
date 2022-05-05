@@ -1,6 +1,6 @@
 const server = require('./server');
 const config = require('./config');
 
-server.create(config);
+const app = server.create(config);
 
-server.start();
+server.start(app);

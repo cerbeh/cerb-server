@@ -1,9 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const app = express();
 const router = require('./router');
 
 const create = config => {
+  const app = express();
 
   app.use(bodyParser.json());
 
@@ -22,9 +22,11 @@ const create = config => {
   router.init(app);
 };
 
-const start = () => {
+const start = app => {
   const PORT = app.get('port');
   app.listen(PORT, () => console.log(`Server up and running on port: ${PORT} @ ${new Date()}`));
+
+  return app;
 };
 
 module.exports = { create, start };
