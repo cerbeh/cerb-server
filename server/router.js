@@ -2,9 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const express = require('express');
 
+const getAppDirectory = () => path.join(__dirname, '../apps');
+
 const createRoutes = () => {
   const router = express.Router();
-  const appDirectory = path.join(__dirname, '../apps');
+  const appDirectory = getAppDirectory();
   fs
     .readdirSync(appDirectory)
     .map(appName => {

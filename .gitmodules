@@ -1,0 +1,3 @@
+[submodule "ui/WDI-Project-One"]
+	path = ui/WDI-Project-One
+	url = https://github.com/cerbeh/WDI-Project-One.git

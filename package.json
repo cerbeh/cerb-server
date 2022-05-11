@@ -1,12 +1,13 @@
 {
-  "name": "wedding-pictures",
+  "name": "cerb-server",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app",
-    "start:server": "npx nodemon --inspect app.js"
+    "start:server": "npx nodemon --inspect app.js",
+    "heroku-postbuild": "node build-frontend.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "googleapis": "^39.2.0",
-    "prismic.io": "^3.6.1"
+    "prismic.io": "^3.6.1",
+    "shelljs": "^0.8.5"
   }
 }
