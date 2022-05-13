@@ -10,6 +10,11 @@ module.exports = function createVirtualHost(domainName, dirPath) {
   //checks request.body for HTTP method overrides
   // host.use(express.methodOverride());
 
+  host.use('*', (req, res, next) => {
+    console.log('Entering virtual host');
+    next();
+  });
+
   //Where to serve static content
   host.get('/', (req, res) => {
     console.log('hello world')
