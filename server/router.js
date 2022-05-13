@@ -30,7 +30,8 @@ const init = server => {
 
   const appRoutes = createRoutes();
   server.use('/api', appRoutes);
-  const vhost = createVirtualHost('colour-clicker.*', `${process.cwd()}/ui/WDI-Project-One`);
+
+  const vhost = createVirtualHost('colour-clicker.*.*', `${process.cwd()}/ui/WDI-Project-One`);
 
   server.use(vhost);
 
