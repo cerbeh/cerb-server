@@ -4,3 +4,5 @@ const config = require('./config');
 const app = server.create(config);
 
 server.start(app);
+
+module.exports = app;

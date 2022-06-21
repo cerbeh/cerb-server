@@ -1,3 +1,6 @@
 [submodule "ui/WDI-Project-One"]
 	path = ui/WDI-Project-One
 	url = https://github.com/cerbeh/WDI-Project-One.git
+[submodule "ui/WDI-Project-4"]
+	path = ui/WDI-Project-4
+	url = https://github.com/cerbeh/WDI-Project-4.git

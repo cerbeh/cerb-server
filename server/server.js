@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const router = require('./router');
+const { vhost } = require('./vhost');
 
 const create = config => {
   const app = express();
@@ -20,6 +21,8 @@ const create = config => {
   app.set('env', config.ENV);
 
   router.init(app);
+  vhost.init(app);
+
   return app;
 };
 
